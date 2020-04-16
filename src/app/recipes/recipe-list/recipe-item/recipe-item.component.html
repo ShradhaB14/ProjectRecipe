@@ -1,0 +1,17 @@
+<a class="list-group-item clearfix" href="#" (click)="sendData()">
+  <div class="col-xs-12">
+    <div>
+      <div class="recipe-cotent">
+        <h4 class="list-group-item-heading">
+          Recipe Name: {{ listofrecipe.title }}
+        </h4>
+        <p class="list-group-item-text">
+          Description: {{ listofrecipe.description }}
+        </p>
+      </div>
+      <span class="pull-right">
+        <img [src]="listofrecipe.imagepath" alt="" style="max-height: 50px;" />
+      </span>
+    </div>
+  </div>
+</a>
