@@ -10,8 +10,17 @@
       <app-recipe-item
         *ngFor="let recipe of recipes"
         [listofrecipe]="recipe"
-        (getRecipe)="getRecipe(recipe)"
       ></app-recipe-item>
     </div>
   </div>
+  <!-- code using component communication -->
+  <!-- <div class="row">
+      <div class="col-xs-12">
+        <app-recipe-item
+          *ngFor="let recipe of recipes"
+          [listofrecipe]="recipe"
+          (getRecipe)="getRecipe(recipe)"
+        ></app-recipe-item>
+      </div>
+    </div> -->
 </div>
