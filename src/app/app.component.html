@@ -1,5 +1,17 @@
-<app-header (getComponent)="getComponent($event)"></app-header>
+<!-- <app-header (getComponent)="getComponent($event)"></app-header>
 <app-recipes *ngIf="navigate === 'recipe'; else elseblock"></app-recipes>
 <ng-template #elseblock>
   <app-shopping-list></app-shopping-list>
-</ng-template>
+</ng-template> -->
+<ul class="nav displayFlex">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Users</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Servers</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
