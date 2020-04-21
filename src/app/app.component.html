@@ -3,15 +3,19 @@
 <ng-template #elseblock>
   <app-shopping-list></app-shopping-list>
 </ng-template> -->
-<ul class="nav displayFlex">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Home</a>
+<ul class="nav nav-tabs">
+  <li
+    role="presentation"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <a routerLink="/">Home</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Users</a>
+  <li role="presentation" routerLinkActive="active">
+    <a routerLink="user">Users</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Servers</a>
+  <li role="presentation" routerLinkActive="active">
+    <a routerLink="server">Servers</a>
   </li>
 </ul>
 <router-outlet></router-outlet>

@@ -1,2 +1,6 @@
-<p>User with ID _ID_ loaded.</p>
-<p>User name is _NAME_</p>
+<p>User with ID _ID_ loaded:{{ user.id }}</p>
+<p>User name is _NAME_:{{ user.name }}</p>
+
+<!-- <a [routerlink]="['/user', 10, 'Anna']" style="cursor:pointer">Load </a> -->
+<a routerLink="/server">Users</a>
+<a [routerLink]="['/user', 10, 'anna']">Loaded(Anna,10)</a>

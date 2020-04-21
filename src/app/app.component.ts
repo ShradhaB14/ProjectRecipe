@@ -7,6 +7,7 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "recipe";
+  // active = 1;
   navigate;
   getComponent(componentNavigate) {
     console.log("component", componentNavigate);
