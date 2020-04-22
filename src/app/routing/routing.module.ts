@@ -7,7 +7,7 @@ import { UserComponent } from "./users/user/user.component";
 import { EditServerComponent } from "./servers/edit-server/edit-server.component";
 import { ServerComponent } from "./servers/server/server.component";
 import { RouterModule } from "@angular/router";
-
+import { FormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     HomeComponent,
@@ -17,7 +17,7 @@ import { RouterModule } from "@angular/router";
     EditServerComponent,
     ServerComponent
   ],
-  imports: [CommonModule, RouterModule],
-  exports: [HomeComponent, ServersComponent, UsersComponent]
+  imports: [CommonModule, RouterModule, FormsModule],
+  exports: [HomeComponent, ServersComponent, UsersComponent, ServerComponent]
 })
 export class RoutingModule {}
