@@ -13,12 +13,15 @@ export class ShoppinglistService {
   ];
   constructor() {}
   onIngredientAdded(ingredientObj) {
-    console.log("asasas", this.ingredientChanged);
-    console.log("asasas", ingredientObj);
     this.ingredients.push(ingredientObj);
     this.ingredientChanged.emit(this.ingredients.slice());
   }
   getIngredients() {
     return this.ingredients.slice();
+  }
+  addIngredient(ingredient: Ingredient[]) {
+    console.log(ingredient);
+    this.ingredients.push(...ingredient);
+    this.ingredientChanged.emit(this.ingredients.slice());
   }
 }

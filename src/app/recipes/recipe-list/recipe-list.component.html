@@ -1,15 +1,16 @@
 <div class="paddingleft15 paddingright15">
   <div class="row">
     <div class="col-xs-12">
-      <button class="btn btn-success">New Recipe</button>
+      <button class="btn btn-success" (click)="navigateTo()">New Recipe</button>
     </div>
   </div>
   <hr />
   <div class="row">
     <div class="col-xs-12">
       <app-recipe-item
-        *ngFor="let recipe of recipes"
+        *ngFor="let recipe of recipes; let i = index"
         [listofrecipe]="recipe"
+        [index]="i"
       ></app-recipe-item>
     </div>
   </div>

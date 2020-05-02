@@ -12,29 +12,9 @@ import { HeaderComponent } from "./header/header.component";
 import { RecipeItemComponent } from "./recipes/recipe-list/recipe-item/recipe-item.component";
 import { DropdownDirective } from "./shared/dropdown.directive";
 import { RoutingModule } from "./routing/routing.module";
-import { Routes, RouterModule } from "@angular/router";
-import { HomeComponent } from "./routing/home/home.component";
-import { UsersComponent } from "./routing/users/users.component";
-import { ServersComponent } from "./routing/servers/servers.component";
-import { UserComponent } from "./routing/users/user/user.component";
-import { EditServerComponent } from "./routing/servers/edit-server/edit-server.component";
-import { ServerComponent } from "./routing/servers/server/server.component";
-const routes: Routes = [
-  { path: "", component: HomeComponent },
-  {
-    path: "user",
-    component: UsersComponent,
-    children: [{ path: ":id/:name", component: UserComponent }]
-  },
-  {
-    path: "server",
-    component: ServersComponent,
-    children: [
-      { path: ":id", component: ServerComponent },
-      { path: ":id/edit", component: EditServerComponent }
-    ]
-  }
-];
+import { Routes, RouterModule, Route } from "@angular/router";
+import { RecipeStartComponent } from "./recipes/recipe-start/recipe-start.component";
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,16 +25,11 @@ const routes: Routes = [
     ShoppingEditComponent,
     HeaderComponent,
     RecipeItemComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RoutingModule,
-    RouterModule.forRoot(routes),
-    RouterModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, RoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
